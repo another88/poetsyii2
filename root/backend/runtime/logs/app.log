@@ -1,0 +1,781 @@
+2014-05-27 09:15:44 [127.0.0.1][][rv4ubup7b5f7oi7hs1siec7qf1][error][yii\db\Exception] exception 'PDOException' with message 'SQLSTATE[28000] [1045] Access denied for user 'root'@'localhost' (using password: NO)' in /shared/yii2/root/vendor/yiisoft/yii2/db/Connection.php:363
+Stack trace:
+#0 /shared/yii2/root/vendor/yiisoft/yii2/db/Connection.php(363): PDO->__construct('mysql:host=loca...', 'root', '', NULL)
+#1 /shared/yii2/root/vendor/yiisoft/yii2/db/Connection.php(317): yii\db\Connection->createPdoInstance()
+#2 /shared/yii2/root/vendor/yiisoft/yii2/db/Connection.php(393): yii\db\Connection->open()
+#3 /shared/yii2/root/vendor/yiisoft/yii2/db/ActiveQuery.php(299): yii\db\Connection->createCommand('SELECT * FROM {...', Array)
+#4 /shared/yii2/root/vendor/yiisoft/yii2/db/ActiveQuery.php(270): yii\db\ActiveQuery->createCommandInternal(NULL)
+#5 /shared/yii2/root/vendor/yiisoft/yii2/db/ActiveQuery.php(226): yii\db\ActiveQuery->createCommand(NULL)
+#6 /shared/yii2/root/vendor/yiisoft/yii2/db/BaseActiveRecord.php(103): yii\db\ActiveQuery->one()
+#7 /shared/yii2/root/common/models/User.php(85): yii\db\BaseActiveRecord::findOne(Array)
+#8 /shared/yii2/root/common/models/LoginForm.php(69): common\models\User::findByUsername('admin')
+#9 /shared/yii2/root/common/models/LoginForm.php(40): common\models\LoginForm->getUser()
+#10 [internal function]: common\models\LoginForm->validatePassword('password', NULL)
+#11 /shared/yii2/root/vendor/yiisoft/yii2/validators/InlineValidator.php(66): call_user_func(Array, 'password', NULL)
+#12 /shared/yii2/root/vendor/yiisoft/yii2/validators/Validator.php(238): yii\validators\InlineValidator->validateAttribute(Object(common\models\LoginForm), 'password')
+#13 /shared/yii2/root/vendor/yiisoft/yii2/base/Model.php(327): yii\validators\Validator->validateAttributes(Object(common\models\LoginForm), Array)
+#14 /shared/yii2/root/common/models/LoginForm.php(54): yii\base\Model->validate()
+#15 /shared/yii2/root/backend/controllers/SiteController.php(68): common\models\LoginForm->login()
+#16 [internal function]: backend\controllers\SiteController->actionLogin()
+#17 /shared/yii2/root/vendor/yiisoft/yii2/base/InlineAction.php(54): call_user_func_array(Array, Array)
+#18 /shared/yii2/root/vendor/yiisoft/yii2/base/Controller.php(147): yii\base\InlineAction->runWithParams(Array)
+#19 /shared/yii2/root/vendor/yiisoft/yii2/base/Module.php(429): yii\base\Controller->runAction('login', Array)
+#20 /shared/yii2/root/vendor/yiisoft/yii2/web/Application.php(82): yii\base\Module->runAction('site/login', Array)
+#21 /shared/yii2/root/vendor/yiisoft/yii2/base/Application.php(365): yii\web\Application->handleRequest(Object(yii\web\Request))
+#22 /shared/yii2/root/backend/web/index.php(17): yii\base\Application->run()
+#23 {main}
+
+Next exception 'yii\db\Exception' with message 'SQLSTATE[28000] [1045] Access denied for user 'root'@'localhost' (using password: NO)' in /shared/yii2/root/vendor/yiisoft/yii2/db/Connection.php:322
+Stack trace:
+#0 /shared/yii2/root/vendor/yiisoft/yii2/db/Connection.php(393): yii\db\Connection->open()
+#1 /shared/yii2/root/vendor/yiisoft/yii2/db/ActiveQuery.php(299): yii\db\Connection->createCommand('SELECT * FROM {...', Array)
+#2 /shared/yii2/root/vendor/yiisoft/yii2/db/ActiveQuery.php(270): yii\db\ActiveQuery->createCommandInternal(NULL)
+#3 /shared/yii2/root/vendor/yiisoft/yii2/db/ActiveQuery.php(226): yii\db\ActiveQuery->createCommand(NULL)
+#4 /shared/yii2/root/vendor/yiisoft/yii2/db/BaseActiveRecord.php(103): yii\db\ActiveQuery->one()
+#5 /shared/yii2/root/common/models/User.php(85): yii\db\BaseActiveRecord::findOne(Array)
+#6 /shared/yii2/root/common/models/LoginForm.php(69): common\models\User::findByUsername('admin')
+#7 /shared/yii2/root/common/models/LoginForm.php(40): common\models\LoginForm->getUser()
+#8 [internal function]: common\models\LoginForm->validatePassword('password', NULL)
+#9 /shared/yii2/root/vendor/yiisoft/yii2/validators/InlineValidator.php(66): call_user_func(Array, 'password', NULL)
+#10 /shared/yii2/root/vendor/yiisoft/yii2/validators/Validator.php(238): yii\validators\InlineValidator->validateAttribute(Object(common\models\LoginForm), 'password')
+#11 /shared/yii2/root/vendor/yiisoft/yii2/base/Model.php(327): yii\validators\Validator->validateAttributes(Object(common\models\LoginForm), Array)
+#12 /shared/yii2/root/common/models/LoginForm.php(54): yii\base\Model->validate()
+#13 /shared/yii2/root/backend/controllers/SiteController.php(68): common\models\LoginForm->login()
+#14 [internal function]: backend\controllers\SiteController->actionLogin()
+#15 /shared/yii2/root/vendor/yiisoft/yii2/base/InlineAction.php(54): call_user_func_array(Array, Array)
+#16 /shared/yii2/root/vendor/yiisoft/yii2/base/Controller.php(147): yii\base\InlineAction->runWithParams(Array)
+#17 /shared/yii2/root/vendor/yiisoft/yii2/base/Module.php(429): yii\base\Controller->runAction('login', Array)
+#18 /shared/yii2/root/vendor/yiisoft/yii2/web/Application.php(82): yii\base\Module->runAction('site/login', Array)
+#19 /shared/yii2/root/vendor/yiisoft/yii2/base/Application.php(365): yii\web\Application->handleRequest(Object(yii\web\Request))
+#20 /shared/yii2/root/backend/web/index.php(17): yii\base\Application->run()
+#21 {main}
+Additional Information:
+
+2014-05-27 09:15:43 [127.0.0.1][][rv4ubup7b5f7oi7hs1siec7qf1][info][application] $_GET = [
+    'r' => 'site/login'
+]
+
+$_POST = [
+    '_csrf' => 'aDQ4Z1NIVzMJYUAdByBidy1hfQA1KTpyDU4PLQAeMXw3BWA3CX5gYg=='
+    'LoginForm' => [
+        'username' => 'admin'
+        'password' => 'admin'
+        'rememberMe' => '1'
+    ]
+    'login-button' => ''
+]
+
+$_COOKIE = [
+    'PHPSESSID' => 'rv4ubup7b5f7oi7hs1siec7qf1'
+    '_csrf' => '39d66f5bc25e0cc0693914f13d3ecf792833cd4a4a1d6bcc483378169364feacs:32:\"aUxzTh5DEUEgfamAez7JSVfO_1XPZ67Q\";'
+]
+
+$_SESSION = [
+    '__flash' => []
+    '__returnUrl' => '/'
+]
+
+$_SERVER = [
+    'HTTP_HOST' => 'test.com'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'CONTENT_LENGTH' => '196'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8'
+    'HTTP_ORIGIN' => 'http://test.com'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (X11; Linux i686) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/35.0.1916.114 Safari/537.36'
+    'CONTENT_TYPE' => 'application/x-www-form-urlencoded'
+    'HTTP_REFERER' => 'http://test.com/index.php?r=site/login'
+    'HTTP_ACCEPT_ENCODING' => 'gzip,deflate,sdch'
+    'HTTP_ACCEPT_LANGUAGE' => 'ru-RU,ru;q=0.8,en-US;q=0.6,en;q=0.4'
+    'HTTP_COOKIE' => 'PHPSESSID=rv4ubup7b5f7oi7hs1siec7qf1; _csrf=39d66f5bc25e0cc0693914f13d3ecf792833cd4a4a1d6bcc483378169364feacs%3A32%3A%22aUxzTh5DEUEgfamAez7JSVfO_1XPZ67Q%22%3B'
+    'PATH' => '/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.7 (Ubuntu) Server at test.com Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.7 (Ubuntu)'
+    'SERVER_NAME' => 'test.com'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => '/shared/yii2/root/backend/web'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => '/shared/yii2/root/backend/web'
+    'SERVER_ADMIN' => 'webmaster@localhost'
+    'SCRIPT_FILENAME' => '/shared/yii2/root/backend/web/index.php'
+    'REMOTE_PORT' => '58121'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'POST'
+    'QUERY_STRING' => 'r=site/login'
+    'REQUEST_URI' => '/index.php?r=site/login'
+    'SCRIPT_NAME' => '/index.php'
+    'PHP_SELF' => '/index.php'
+    'REQUEST_TIME_FLOAT' => 1401182143.714
+    'REQUEST_TIME' => 1401182143
+]
+2014-06-05 17:06:38 [127.0.0.1][-][-][error][yii\db\Exception] exception 'PDOException' with message 'SQLSTATE[HY000] [2002] Попытка установить соединение была безуспешной, т.к. от другого компьютера за требуемое время не получен нужный отклик, или было разорвано уже установленное соединение из-за неверного отклика уже подключенного компьютера.
+' in F:\Work\OpenServer\domains\poets\root\vendor\yiisoft\yii2\db\Connection.php:363
+Stack trace:
+#0 F:\Work\OpenServer\domains\poets\root\vendor\yiisoft\yii2\db\Connection.php(363): PDO->__construct('mysql:host=ec2-...', 'bnctpwjmbvmvyj', 'jIOfvYCSfoM_ezT...', NULL)
+#1 F:\Work\OpenServer\domains\poets\root\vendor\yiisoft\yii2\db\Connection.php(317): yii\db\Connection->createPdoInstance()
+#2 F:\Work\OpenServer\domains\poets\root\vendor\yiisoft\yii2\db\Connection.php(393): yii\db\Connection->open()
+#3 F:\Work\OpenServer\domains\poets\root\vendor\yiisoft\yii2\db\mysql\Schema.php(294): yii\db\Connection->createCommand('SHOW TABLES')
+#4 F:\Work\OpenServer\domains\poets\root\vendor\yiisoft\yii2\db\Schema.php(191): yii\db\mysql\Schema->findTableNames('')
+#5 F:\Work\OpenServer\domains\poets\root\vendor\yiisoft\yii2-gii\generators\model\Generator.php(130): yii\db\Schema->getTableNames()
+#6 [internal function]: yii\gii\generators\model\Generator->yii\gii\generators\model\{closure}()
+#7 F:\Work\OpenServer\domains\poets\root\vendor\yiisoft\yii2-gii\components\ActiveField.php(40): call_user_func(Object(Closure))
+#8 F:\Work\OpenServer\domains\poets\root\vendor\yiisoft\yii2\base\Object.php(107): yii\gii\components\ActiveField->init()
+#9 [internal function]: yii\base\Object->__construct(Array)
+#10 F:\Work\OpenServer\domains\poets\root\vendor\yiisoft\yii2\di\Container.php(364): ReflectionClass->newInstanceArgs(Array)
+#11 F:\Work\OpenServer\domains\poets\root\vendor\yiisoft\yii2\di\Container.php(147): yii\di\Container->build('yii\gii\compone...', Array, Array)
+#12 F:\Work\OpenServer\domains\poets\root\vendor\yiisoft\yii2\BaseYii.php(344): yii\di\Container->get('yii\gii\compone...', Array, Array)
+#13 F:\Work\OpenServer\domains\poets\root\vendor\yiisoft\yii2\widgets\ActiveForm.php(257): yii\BaseYii::createObject(Array)
+#14 F:\Work\OpenServer\domains\poets\root\vendor\yiisoft\yii2-gii\generators\model\form.php(8): yii\widgets\ActiveForm->field(Object(yii\gii\generators\model\Generator), 'tableName')
+#15 F:\Work\OpenServer\domains\poets\root\vendor\yiisoft\yii2\base\View.php(315): require('F:\Work\OpenSer...')
+#16 F:\Work\OpenServer\domains\poets\root\vendor\yiisoft\yii2\base\View.php(247): yii\base\View->renderPhpFile('F:\Work\OpenSer...', Array)
+#17 F:\Work\OpenServer\domains\poets\root\vendor\yiisoft\yii2-gii\views\default\view.php(40): yii\base\View->renderFile('F:\Work\OpenSer...', Array)
+#18 F:\Work\OpenServer\domains\poets\root\vendor\yiisoft\yii2\base\View.php(315): require('F:\Work\OpenSer...')
+#19 F:\Work\OpenServer\domains\poets\root\vendor\yiisoft\yii2\base\View.php(247): yii\base\View->renderPhpFile('F:\Work\OpenSer...', Array)
+#20 F:\Work\OpenServer\domains\poets\root\vendor\yiisoft\yii2\base\View.php(149): yii\base\View->renderFile('F:\Work\OpenSer...', Array, Object(yii\gii\controllers\DefaultController))
+#21 F:\Work\OpenServer\domains\poets\root\vendor\yiisoft\yii2\base\Controller.php(362): yii\base\View->render('view', Array, Object(yii\gii\controllers\DefaultController))
+#22 F:\Work\OpenServer\domains\poets\root\vendor\yiisoft\yii2-gii\controllers\DefaultController.php(55): yii\base\Controller->render('view', Array)
+#23 [internal function]: yii\gii\controllers\DefaultController->actionView('model')
+#24 F:\Work\OpenServer\domains\poets\root\vendor\yiisoft\yii2\base\InlineAction.php(54): call_user_func_array(Array, Array)
+#25 F:\Work\OpenServer\domains\poets\root\vendor\yiisoft\yii2\base\Controller.php(147): yii\base\InlineAction->runWithParams(Array)
+#26 F:\Work\OpenServer\domains\poets\root\vendor\yiisoft\yii2\base\Module.php(429): yii\base\Controller->runAction('view', Array)
+#27 F:\Work\OpenServer\domains\poets\root\vendor\yiisoft\yii2\web\Application.php(82): yii\base\Module->runAction('gii/default/vie...', Array)
+#28 F:\Work\OpenServer\domains\poets\root\vendor\yiisoft\yii2\base\Application.php(365): yii\web\Application->handleRequest(Object(yii\web\Request))
+#29 F:\Work\OpenServer\domains\poets\root\backend\web\index.php(17): yii\base\Application->run()
+#30 {main}
+
+Next exception 'yii\db\Exception' with message 'SQLSTATE[HY000] [2002] Попытка установить соединение была безуспешной, т.к. от другого компьютера за требуемое время не получен нужный отклик, или было разорвано уже установленное соединение из-за неверного отклика уже подключенного компьютера.
+' in F:\Work\OpenServer\domains\poets\root\vendor\yiisoft\yii2\db\Connection.php:322
+Stack trace:
+#0 F:\Work\OpenServer\domains\poets\root\vendor\yiisoft\yii2\db\Connection.php(393): yii\db\Connection->open()
+#1 F:\Work\OpenServer\domains\poets\root\vendor\yiisoft\yii2\db\mysql\Schema.php(294): yii\db\Connection->createCommand('SHOW TABLES')
+#2 F:\Work\OpenServer\domains\poets\root\vendor\yiisoft\yii2\db\Schema.php(191): yii\db\mysql\Schema->findTableNames('')
+#3 F:\Work\OpenServer\domains\poets\root\vendor\yiisoft\yii2-gii\generators\model\Generator.php(130): yii\db\Schema->getTableNames()
+#4 [internal function]: yii\gii\generators\model\Generator->yii\gii\generators\model\{closure}()
+#5 F:\Work\OpenServer\domains\poets\root\vendor\yiisoft\yii2-gii\components\ActiveField.php(40): call_user_func(Object(Closure))
+#6 F:\Work\OpenServer\domains\poets\root\vendor\yiisoft\yii2\base\Object.php(107): yii\gii\components\ActiveField->init()
+#7 [internal function]: yii\base\Object->__construct(Array)
+#8 F:\Work\OpenServer\domains\poets\root\vendor\yiisoft\yii2\di\Container.php(364): ReflectionClass->newInstanceArgs(Array)
+#9 F:\Work\OpenServer\domains\poets\root\vendor\yiisoft\yii2\di\Container.php(147): yii\di\Container->build('yii\gii\compone...', Array, Array)
+#10 F:\Work\OpenServer\domains\poets\root\vendor\yiisoft\yii2\BaseYii.php(344): yii\di\Container->get('yii\gii\compone...', Array, Array)
+#11 F:\Work\OpenServer\domains\poets\root\vendor\yiisoft\yii2\widgets\ActiveForm.php(257): yii\BaseYii::createObject(Array)
+#12 F:\Work\OpenServer\domains\poets\root\vendor\yiisoft\yii2-gii\generators\model\form.php(8): yii\widgets\ActiveForm->field(Object(yii\gii\generators\model\Generator), 'tableName')
+#13 F:\Work\OpenServer\domains\poets\root\vendor\yiisoft\yii2\base\View.php(315): require('F:\Work\OpenSer...')
+#14 F:\Work\OpenServer\domains\poets\root\vendor\yiisoft\yii2\base\View.php(247): yii\base\View->renderPhpFile('F:\Work\OpenSer...', Array)
+#15 F:\Work\OpenServer\domains\poets\root\vendor\yiisoft\yii2-gii\views\default\view.php(40): yii\base\View->renderFile('F:\Work\OpenSer...', Array)
+#16 F:\Work\OpenServer\domains\poets\root\vendor\yiisoft\yii2\base\View.php(315): require('F:\Work\OpenSer...')
+#17 F:\Work\OpenServer\domains\poets\root\vendor\yiisoft\yii2\base\View.php(247): yii\base\View->renderPhpFile('F:\Work\OpenSer...', Array)
+#18 F:\Work\OpenServer\domains\poets\root\vendor\yiisoft\yii2\base\View.php(149): yii\base\View->renderFile('F:\Work\OpenSer...', Array, Object(yii\gii\controllers\DefaultController))
+#19 F:\Work\OpenServer\domains\poets\root\vendor\yiisoft\yii2\base\Controller.php(362): yii\base\View->render('view', Array, Object(yii\gii\controllers\DefaultController))
+#20 F:\Work\OpenServer\domains\poets\root\vendor\yiisoft\yii2-gii\controllers\DefaultController.php(55): yii\base\Controller->render('view', Array)
+#21 [internal function]: yii\gii\controllers\DefaultController->actionView('model')
+#22 F:\Work\OpenServer\domains\poets\root\vendor\yiisoft\yii2\base\InlineAction.php(54): call_user_func_array(Array, Array)
+#23 F:\Work\OpenServer\domains\poets\root\vendor\yiisoft\yii2\base\Controller.php(147): yii\base\InlineAction->runWithParams(Array)
+#24 F:\Work\OpenServer\domains\poets\root\vendor\yiisoft\yii2\base\Module.php(429): yii\base\Controller->runAction('view', Array)
+#25 F:\Work\OpenServer\domains\poets\root\vendor\yiisoft\yii2\web\Application.php(82): yii\base\Module->runAction('gii/default/vie...', Array)
+#26 F:\Work\OpenServer\domains\poets\root\vendor\yiisoft\yii2\base\Application.php(365): yii\web\Application->handleRequest(Object(yii\web\Request))
+#27 F:\Work\OpenServer\domains\poets\root\backend\web\index.php(17): yii\base\Application->run()
+#28 {main}
+Additional Information:
+
+2014-06-05 17:06:17 [127.0.0.1][-][-][info][application] $_GET = [
+    'r' => 'gii/default/view'
+    'id' => 'model'
+]
+
+$_COOKIE = [
+    'PHPSESSID' => 'bvimaf7cqni5amnagehq08qfi0'
+    '_csrf' => '2221b1124b18d0bd9f9bf2f8e010fc6690d380c0ef188dcc2059fdb360c241f9s:32:\"47VZkCCnB3RXF-QMmb6Z-zDEqD3TeruW\";'
+]
+
+$_SERVER = [
+    'HTTP_HOST' => 'admin.poets.yii'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/37.0.2024.2 Safari/537.36'
+    'HTTP_REFERER' => 'http://admin.poets.yii/index.php?r=gii'
+    'HTTP_ACCEPT_ENCODING' => 'gzip,deflate,sdch'
+    'HTTP_ACCEPT_LANGUAGE' => 'ru-RU,ru;q=0.8,en-US;q=0.6,en;q=0.4'
+    'HTTP_COOKIE' => 'PHPSESSID=bvimaf7cqni5amnagehq08qfi0; _csrf=2221b1124b18d0bd9f9bf2f8e010fc6690d380c0ef188dcc2059fdb360c241f9s%3A32%3A%2247VZkCCnB3RXF-QMmb6Z-zDEqD3TeruW%22%3B'
+    'PATH' => 'F:\\Work\\OpenServer\\modules\\php\\PHP-5.4.22\\ext;F:\\Work\\OpenServer\\modules\\php\\PHP-5.4.22\\pear;F:\\Work\\OpenServer\\modules\\imagemagick;F:\\Work\\OpenServer\\modules\\php\\PHP-5.4.22;F:\\Work\\OpenServer\\modules\\database\\MySQL-5.5.35\\bin;F:\\Work\\OpenServer\\modules\\http\\Apache-2.2.26\\bin;F:\\Work\\OpenServer\\modules\\http\\Apache-2.2.26;F:\\Work\\OpenServer\\modules\\wget\\bin;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\system32\\Wbem;C:\\Windows\\SysWOW64'
+    'SystemRoot' => 'C:\\Windows'
+    'COMSPEC' => 'C:\\Windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\Windows'
+    'SERVER_SIGNATURE' => ''
+    'SERVER_SOFTWARE' => 'Apache/2.2.26 (Win32)'
+    'SERVER_NAME' => 'admin.poets.yii'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => 'F:/Work/OpenServer/domains/poets/root/backend/web'
+    'SERVER_ADMIN' => '[no address given]'
+    'SCRIPT_FILENAME' => 'F:/Work/OpenServer/domains/poets/root/backend/web/index.php'
+    'REMOTE_PORT' => '64091'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'r=gii/default/view&id=model'
+    'REQUEST_URI' => '/index.php?r=gii/default/view&id=model'
+    'SCRIPT_NAME' => '/index.php'
+    'PHP_SELF' => '/index.php'
+    'REQUEST_TIME_FLOAT' => 1401973577.136
+    'REQUEST_TIME' => 1401973577
+    'argv' => [
+        0 => 'r=gii/default/view&id=model'
+    ]
+    'argc' => 1
+]
+2014-06-05 17:08:55 [127.0.0.1][-][-][error][yii\db\Exception] exception 'PDOException' with message 'SQLSTATE[08006] [7] FATAL:  no pg_hba.conf entry for host "178.150.143.46", user "bnctpwjmbvmvyj", database "dnavqd9qna0dg", SSL off' in F:\Work\OpenServer\domains\poets\root\vendor\yiisoft\yii2\db\Connection.php:363
+Stack trace:
+#0 F:\Work\OpenServer\domains\poets\root\vendor\yiisoft\yii2\db\Connection.php(363): PDO->__construct('pgsql:host=ec2-...', 'bnctpwjmbvmvyj', 'jIOfvYCSfoM_ezT...', NULL)
+#1 F:\Work\OpenServer\domains\poets\root\vendor\yiisoft\yii2\db\Connection.php(317): yii\db\Connection->createPdoInstance()
+#2 F:\Work\OpenServer\domains\poets\root\vendor\yiisoft\yii2\db\Connection.php(393): yii\db\Connection->open()
+#3 F:\Work\OpenServer\domains\poets\root\vendor\yiisoft\yii2\db\pgsql\Schema.php(204): yii\db\Connection->createCommand('SELECT table_na...')
+#4 F:\Work\OpenServer\domains\poets\root\vendor\yiisoft\yii2\db\Schema.php(191): yii\db\pgsql\Schema->findTableNames('')
+#5 F:\Work\OpenServer\domains\poets\root\vendor\yiisoft\yii2-gii\generators\model\Generator.php(130): yii\db\Schema->getTableNames()
+#6 [internal function]: yii\gii\generators\model\Generator->yii\gii\generators\model\{closure}()
+#7 F:\Work\OpenServer\domains\poets\root\vendor\yiisoft\yii2-gii\components\ActiveField.php(40): call_user_func(Object(Closure))
+#8 F:\Work\OpenServer\domains\poets\root\vendor\yiisoft\yii2\base\Object.php(107): yii\gii\components\ActiveField->init()
+#9 [internal function]: yii\base\Object->__construct(Array)
+#10 F:\Work\OpenServer\domains\poets\root\vendor\yiisoft\yii2\di\Container.php(364): ReflectionClass->newInstanceArgs(Array)
+#11 F:\Work\OpenServer\domains\poets\root\vendor\yiisoft\yii2\di\Container.php(147): yii\di\Container->build('yii\gii\compone...', Array, Array)
+#12 F:\Work\OpenServer\domains\poets\root\vendor\yiisoft\yii2\BaseYii.php(344): yii\di\Container->get('yii\gii\compone...', Array, Array)
+#13 F:\Work\OpenServer\domains\poets\root\vendor\yiisoft\yii2\widgets\ActiveForm.php(257): yii\BaseYii::createObject(Array)
+#14 F:\Work\OpenServer\domains\poets\root\vendor\yiisoft\yii2-gii\generators\model\form.php(8): yii\widgets\ActiveForm->field(Object(yii\gii\generators\model\Generator), 'tableName')
+#15 F:\Work\OpenServer\domains\poets\root\vendor\yiisoft\yii2\base\View.php(315): require('F:\Work\OpenSer...')
+#16 F:\Work\OpenServer\domains\poets\root\vendor\yiisoft\yii2\base\View.php(247): yii\base\View->renderPhpFile('F:\Work\OpenSer...', Array)
+#17 F:\Work\OpenServer\domains\poets\root\vendor\yiisoft\yii2-gii\views\default\view.php(40): yii\base\View->renderFile('F:\Work\OpenSer...', Array)
+#18 F:\Work\OpenServer\domains\poets\root\vendor\yiisoft\yii2\base\View.php(315): require('F:\Work\OpenSer...')
+#19 F:\Work\OpenServer\domains\poets\root\vendor\yiisoft\yii2\base\View.php(247): yii\base\View->renderPhpFile('F:\Work\OpenSer...', Array)
+#20 F:\Work\OpenServer\domains\poets\root\vendor\yiisoft\yii2\base\View.php(149): yii\base\View->renderFile('F:\Work\OpenSer...', Array, Object(yii\gii\controllers\DefaultController))
+#21 F:\Work\OpenServer\domains\poets\root\vendor\yiisoft\yii2\base\Controller.php(362): yii\base\View->render('view', Array, Object(yii\gii\controllers\DefaultController))
+#22 F:\Work\OpenServer\domains\poets\root\vendor\yiisoft\yii2-gii\controllers\DefaultController.php(55): yii\base\Controller->render('view', Array)
+#23 [internal function]: yii\gii\controllers\DefaultController->actionView('model')
+#24 F:\Work\OpenServer\domains\poets\root\vendor\yiisoft\yii2\base\InlineAction.php(54): call_user_func_array(Array, Array)
+#25 F:\Work\OpenServer\domains\poets\root\vendor\yiisoft\yii2\base\Controller.php(147): yii\base\InlineAction->runWithParams(Array)
+#26 F:\Work\OpenServer\domains\poets\root\vendor\yiisoft\yii2\base\Module.php(429): yii\base\Controller->runAction('view', Array)
+#27 F:\Work\OpenServer\domains\poets\root\vendor\yiisoft\yii2\web\Application.php(82): yii\base\Module->runAction('gii/default/vie...', Array)
+#28 F:\Work\OpenServer\domains\poets\root\vendor\yiisoft\yii2\base\Application.php(365): yii\web\Application->handleRequest(Object(yii\web\Request))
+#29 F:\Work\OpenServer\domains\poets\root\backend\web\index.php(17): yii\base\Application->run()
+#30 {main}
+
+Next exception 'yii\db\Exception' with message 'SQLSTATE[08006] [7] FATAL:  no pg_hba.conf entry for host "178.150.143.46", user "bnctpwjmbvmvyj", database "dnavqd9qna0dg", SSL off' in F:\Work\OpenServer\domains\poets\root\vendor\yiisoft\yii2\db\Connection.php:322
+Stack trace:
+#0 F:\Work\OpenServer\domains\poets\root\vendor\yiisoft\yii2\db\Connection.php(393): yii\db\Connection->open()
+#1 F:\Work\OpenServer\domains\poets\root\vendor\yiisoft\yii2\db\pgsql\Schema.php(204): yii\db\Connection->createCommand('SELECT table_na...')
+#2 F:\Work\OpenServer\domains\poets\root\vendor\yiisoft\yii2\db\Schema.php(191): yii\db\pgsql\Schema->findTableNames('')
+#3 F:\Work\OpenServer\domains\poets\root\vendor\yiisoft\yii2-gii\generators\model\Generator.php(130): yii\db\Schema->getTableNames()
+#4 [internal function]: yii\gii\generators\model\Generator->yii\gii\generators\model\{closure}()
+#5 F:\Work\OpenServer\domains\poets\root\vendor\yiisoft\yii2-gii\components\ActiveField.php(40): call_user_func(Object(Closure))
+#6 F:\Work\OpenServer\domains\poets\root\vendor\yiisoft\yii2\base\Object.php(107): yii\gii\components\ActiveField->init()
+#7 [internal function]: yii\base\Object->__construct(Array)
+#8 F:\Work\OpenServer\domains\poets\root\vendor\yiisoft\yii2\di\Container.php(364): ReflectionClass->newInstanceArgs(Array)
+#9 F:\Work\OpenServer\domains\poets\root\vendor\yiisoft\yii2\di\Container.php(147): yii\di\Container->build('yii\gii\compone...', Array, Array)
+#10 F:\Work\OpenServer\domains\poets\root\vendor\yiisoft\yii2\BaseYii.php(344): yii\di\Container->get('yii\gii\compone...', Array, Array)
+#11 F:\Work\OpenServer\domains\poets\root\vendor\yiisoft\yii2\widgets\ActiveForm.php(257): yii\BaseYii::createObject(Array)
+#12 F:\Work\OpenServer\domains\poets\root\vendor\yiisoft\yii2-gii\generators\model\form.php(8): yii\widgets\ActiveForm->field(Object(yii\gii\generators\model\Generator), 'tableName')
+#13 F:\Work\OpenServer\domains\poets\root\vendor\yiisoft\yii2\base\View.php(315): require('F:\Work\OpenSer...')
+#14 F:\Work\OpenServer\domains\poets\root\vendor\yiisoft\yii2\base\View.php(247): yii\base\View->renderPhpFile('F:\Work\OpenSer...', Array)
+#15 F:\Work\OpenServer\domains\poets\root\vendor\yiisoft\yii2-gii\views\default\view.php(40): yii\base\View->renderFile('F:\Work\OpenSer...', Array)
+#16 F:\Work\OpenServer\domains\poets\root\vendor\yiisoft\yii2\base\View.php(315): require('F:\Work\OpenSer...')
+#17 F:\Work\OpenServer\domains\poets\root\vendor\yiisoft\yii2\base\View.php(247): yii\base\View->renderPhpFile('F:\Work\OpenSer...', Array)
+#18 F:\Work\OpenServer\domains\poets\root\vendor\yiisoft\yii2\base\View.php(149): yii\base\View->renderFile('F:\Work\OpenSer...', Array, Object(yii\gii\controllers\DefaultController))
+#19 F:\Work\OpenServer\domains\poets\root\vendor\yiisoft\yii2\base\Controller.php(362): yii\base\View->render('view', Array, Object(yii\gii\controllers\DefaultController))
+#20 F:\Work\OpenServer\domains\poets\root\vendor\yiisoft\yii2-gii\controllers\DefaultController.php(55): yii\base\Controller->render('view', Array)
+#21 [internal function]: yii\gii\controllers\DefaultController->actionView('model')
+#22 F:\Work\OpenServer\domains\poets\root\vendor\yiisoft\yii2\base\InlineAction.php(54): call_user_func_array(Array, Array)
+#23 F:\Work\OpenServer\domains\poets\root\vendor\yiisoft\yii2\base\Controller.php(147): yii\base\InlineAction->runWithParams(Array)
+#24 F:\Work\OpenServer\domains\poets\root\vendor\yiisoft\yii2\base\Module.php(429): yii\base\Controller->runAction('view', Array)
+#25 F:\Work\OpenServer\domains\poets\root\vendor\yiisoft\yii2\web\Application.php(82): yii\base\Module->runAction('gii/default/vie...', Array)
+#26 F:\Work\OpenServer\domains\poets\root\vendor\yiisoft\yii2\base\Application.php(365): yii\web\Application->handleRequest(Object(yii\web\Request))
+#27 F:\Work\OpenServer\domains\poets\root\backend\web\index.php(17): yii\base\Application->run()
+#28 {main}
+Additional Information:
+
+2014-06-05 17:08:55 [127.0.0.1][-][-][info][application] $_GET = [
+    'r' => 'gii/default/view'
+    'id' => 'model'
+]
+
+$_COOKIE = [
+    'PHPSESSID' => 'bvimaf7cqni5amnagehq08qfi0'
+    '_csrf' => '2221b1124b18d0bd9f9bf2f8e010fc6690d380c0ef188dcc2059fdb360c241f9s:32:\"47VZkCCnB3RXF-QMmb6Z-zDEqD3TeruW\";'
+]
+
+$_SERVER = [
+    'HTTP_HOST' => 'admin.poets.yii'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/37.0.2024.2 Safari/537.36'
+    'HTTP_REFERER' => 'http://admin.poets.yii/index.php?r=gii'
+    'HTTP_ACCEPT_ENCODING' => 'gzip,deflate,sdch'
+    'HTTP_ACCEPT_LANGUAGE' => 'ru-RU,ru;q=0.8,en-US;q=0.6,en;q=0.4'
+    'HTTP_COOKIE' => 'PHPSESSID=bvimaf7cqni5amnagehq08qfi0; _csrf=2221b1124b18d0bd9f9bf2f8e010fc6690d380c0ef188dcc2059fdb360c241f9s%3A32%3A%2247VZkCCnB3RXF-QMmb6Z-zDEqD3TeruW%22%3B'
+    'PATH' => 'F:\\Work\\OpenServer\\modules\\php\\PHP-5.4.22\\ext;F:\\Work\\OpenServer\\modules\\php\\PHP-5.4.22\\pear;F:\\Work\\OpenServer\\modules\\imagemagick;F:\\Work\\OpenServer\\modules\\php\\PHP-5.4.22;F:\\Work\\OpenServer\\modules\\database\\MySQL-5.5.35\\bin;F:\\Work\\OpenServer\\modules\\http\\Apache-2.2.26\\bin;F:\\Work\\OpenServer\\modules\\http\\Apache-2.2.26;F:\\Work\\OpenServer\\modules\\wget\\bin;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\system32\\Wbem;C:\\Windows\\SysWOW64'
+    'SystemRoot' => 'C:\\Windows'
+    'COMSPEC' => 'C:\\Windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\Windows'
+    'SERVER_SIGNATURE' => ''
+    'SERVER_SOFTWARE' => 'Apache/2.2.26 (Win32)'
+    'SERVER_NAME' => 'admin.poets.yii'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => 'F:/Work/OpenServer/domains/poets/root/backend/web'
+    'SERVER_ADMIN' => '[no address given]'
+    'SCRIPT_FILENAME' => 'F:/Work/OpenServer/domains/poets/root/backend/web/index.php'
+    'REMOTE_PORT' => '64409'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'r=gii/default/view&id=model'
+    'REQUEST_URI' => '/index.php?r=gii/default/view&id=model'
+    'SCRIPT_NAME' => '/index.php'
+    'PHP_SELF' => '/index.php'
+    'REQUEST_TIME_FLOAT' => 1401973735.061
+    'REQUEST_TIME' => 1401973735
+    'argv' => [
+        0 => 'r=gii/default/view&id=model'
+    ]
+    'argc' => 1
+]
+2014-06-05 17:09:29 [127.0.0.1][-][-][error][yii\base\UnknownPropertyException] exception 'yii\base\UnknownPropertyException' with message 'Setting unknown property: yii\db\Connection::connectionString' in F:\Work\OpenServer\domains\poets\root\vendor\yiisoft\yii2\base\Component.php:196
+Stack trace:
+#0 F:\Work\OpenServer\domains\poets\root\vendor\yiisoft\yii2\BaseYii.php(518): yii\base\Component->__set('connectionStrin...', 'pgsql:host=ec2-...')
+#1 F:\Work\OpenServer\domains\poets\root\vendor\yiisoft\yii2\base\Object.php(105): yii\BaseYii::configure(Object(yii\db\Connection), Array)
+#2 [internal function]: yii\base\Object->__construct(Array)
+#3 F:\Work\OpenServer\domains\poets\root\vendor\yiisoft\yii2\di\Container.php(364): ReflectionClass->newInstanceArgs(Array)
+#4 F:\Work\OpenServer\domains\poets\root\vendor\yiisoft\yii2\di\Container.php(147): yii\di\Container->build('yii\db\Connecti...', Array, Array)
+#5 F:\Work\OpenServer\domains\poets\root\vendor\yiisoft\yii2\BaseYii.php(344): yii\di\Container->get('yii\db\Connecti...', Array, Array)
+#6 F:\Work\OpenServer\domains\poets\root\vendor\yiisoft\yii2\di\ServiceLocator.php(132): yii\BaseYii::createObject(Array)
+#7 F:\Work\OpenServer\domains\poets\root\vendor\yiisoft\yii2-gii\generators\model\Generator.php(605): yii\di\ServiceLocator->get('db', false)
+#8 F:\Work\OpenServer\domains\poets\root\vendor\yiisoft\yii2-gii\generators\model\Generator.php(126): yii\gii\generators\model\Generator->getDbConnection()
+#9 F:\Work\OpenServer\domains\poets\root\vendor\yiisoft\yii2-gii\components\ActiveField.php(37): yii\gii\generators\model\Generator->autoCompleteData()
+#10 F:\Work\OpenServer\domains\poets\root\vendor\yiisoft\yii2\base\Object.php(107): yii\gii\components\ActiveField->init()
+#11 [internal function]: yii\base\Object->__construct(Array)
+#12 F:\Work\OpenServer\domains\poets\root\vendor\yiisoft\yii2\di\Container.php(364): ReflectionClass->newInstanceArgs(Array)
+#13 F:\Work\OpenServer\domains\poets\root\vendor\yiisoft\yii2\di\Container.php(147): yii\di\Container->build('yii\gii\compone...', Array, Array)
+#14 F:\Work\OpenServer\domains\poets\root\vendor\yiisoft\yii2\BaseYii.php(344): yii\di\Container->get('yii\gii\compone...', Array, Array)
+#15 F:\Work\OpenServer\domains\poets\root\vendor\yiisoft\yii2\widgets\ActiveForm.php(257): yii\BaseYii::createObject(Array)
+#16 F:\Work\OpenServer\domains\poets\root\vendor\yiisoft\yii2-gii\generators\model\form.php(8): yii\widgets\ActiveForm->field(Object(yii\gii\generators\model\Generator), 'tableName')
+#17 F:\Work\OpenServer\domains\poets\root\vendor\yiisoft\yii2\base\View.php(315): require('F:\Work\OpenSer...')
+#18 F:\Work\OpenServer\domains\poets\root\vendor\yiisoft\yii2\base\View.php(247): yii\base\View->renderPhpFile('F:\Work\OpenSer...', Array)
+#19 F:\Work\OpenServer\domains\poets\root\vendor\yiisoft\yii2-gii\views\default\view.php(40): yii\base\View->renderFile('F:\Work\OpenSer...', Array)
+#20 F:\Work\OpenServer\domains\poets\root\vendor\yiisoft\yii2\base\View.php(315): require('F:\Work\OpenSer...')
+#21 F:\Work\OpenServer\domains\poets\root\vendor\yiisoft\yii2\base\View.php(247): yii\base\View->renderPhpFile('F:\Work\OpenSer...', Array)
+#22 F:\Work\OpenServer\domains\poets\root\vendor\yiisoft\yii2\base\View.php(149): yii\base\View->renderFile('F:\Work\OpenSer...', Array, Object(yii\gii\controllers\DefaultController))
+#23 F:\Work\OpenServer\domains\poets\root\vendor\yiisoft\yii2\base\Controller.php(362): yii\base\View->render('view', Array, Object(yii\gii\controllers\DefaultController))
+#24 F:\Work\OpenServer\domains\poets\root\vendor\yiisoft\yii2-gii\controllers\DefaultController.php(55): yii\base\Controller->render('view', Array)
+#25 [internal function]: yii\gii\controllers\DefaultController->actionView('model')
+#26 F:\Work\OpenServer\domains\poets\root\vendor\yiisoft\yii2\base\InlineAction.php(54): call_user_func_array(Array, Array)
+#27 F:\Work\OpenServer\domains\poets\root\vendor\yiisoft\yii2\base\Controller.php(147): yii\base\InlineAction->runWithParams(Array)
+#28 F:\Work\OpenServer\domains\poets\root\vendor\yiisoft\yii2\base\Module.php(429): yii\base\Controller->runAction('view', Array)
+#29 F:\Work\OpenServer\domains\poets\root\vendor\yiisoft\yii2\web\Application.php(82): yii\base\Module->runAction('gii/default/vie...', Array)
+#30 F:\Work\OpenServer\domains\poets\root\vendor\yiisoft\yii2\base\Application.php(365): yii\web\Application->handleRequest(Object(yii\web\Request))
+#31 F:\Work\OpenServer\domains\poets\root\backend\web\index.php(17): yii\base\Application->run()
+#32 {main}
+2014-06-05 17:09:29 [127.0.0.1][-][-][info][application] $_GET = [
+    'r' => 'gii/default/view'
+    'id' => 'model'
+]
+
+$_COOKIE = [
+    'PHPSESSID' => 'bvimaf7cqni5amnagehq08qfi0'
+    '_csrf' => '2221b1124b18d0bd9f9bf2f8e010fc6690d380c0ef188dcc2059fdb360c241f9s:32:\"47VZkCCnB3RXF-QMmb6Z-zDEqD3TeruW\";'
+]
+
+$_SERVER = [
+    'HTTP_HOST' => 'admin.poets.yii'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/37.0.2024.2 Safari/537.36'
+    'HTTP_REFERER' => 'http://admin.poets.yii/index.php?r=gii'
+    'HTTP_ACCEPT_ENCODING' => 'gzip,deflate,sdch'
+    'HTTP_ACCEPT_LANGUAGE' => 'ru-RU,ru;q=0.8,en-US;q=0.6,en;q=0.4'
+    'HTTP_COOKIE' => 'PHPSESSID=bvimaf7cqni5amnagehq08qfi0; _csrf=2221b1124b18d0bd9f9bf2f8e010fc6690d380c0ef188dcc2059fdb360c241f9s%3A32%3A%2247VZkCCnB3RXF-QMmb6Z-zDEqD3TeruW%22%3B'
+    'PATH' => 'F:\\Work\\OpenServer\\modules\\php\\PHP-5.4.22\\ext;F:\\Work\\OpenServer\\modules\\php\\PHP-5.4.22\\pear;F:\\Work\\OpenServer\\modules\\imagemagick;F:\\Work\\OpenServer\\modules\\php\\PHP-5.4.22;F:\\Work\\OpenServer\\modules\\database\\MySQL-5.5.35\\bin;F:\\Work\\OpenServer\\modules\\http\\Apache-2.2.26\\bin;F:\\Work\\OpenServer\\modules\\http\\Apache-2.2.26;F:\\Work\\OpenServer\\modules\\wget\\bin;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\system32\\Wbem;C:\\Windows\\SysWOW64'
+    'SystemRoot' => 'C:\\Windows'
+    'COMSPEC' => 'C:\\Windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\Windows'
+    'SERVER_SIGNATURE' => ''
+    'SERVER_SOFTWARE' => 'Apache/2.2.26 (Win32)'
+    'SERVER_NAME' => 'admin.poets.yii'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => 'F:/Work/OpenServer/domains/poets/root/backend/web'
+    'SERVER_ADMIN' => '[no address given]'
+    'SCRIPT_FILENAME' => 'F:/Work/OpenServer/domains/poets/root/backend/web/index.php'
+    'REMOTE_PORT' => '64512'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'r=gii/default/view&id=model'
+    'REQUEST_URI' => '/index.php?r=gii/default/view&id=model'
+    'SCRIPT_NAME' => '/index.php'
+    'PHP_SELF' => '/index.php'
+    'REQUEST_TIME_FLOAT' => 1401973769.894
+    'REQUEST_TIME' => 1401973769
+    'argv' => [
+        0 => 'r=gii/default/view&id=model'
+    ]
+    'argc' => 1
+]
+2014-06-05 17:09:35 [127.0.0.1][-][-][error][yii\base\UnknownPropertyException] exception 'yii\base\UnknownPropertyException' with message 'Setting unknown property: yii\db\Connection::connectionString' in F:\Work\OpenServer\domains\poets\root\vendor\yiisoft\yii2\base\Component.php:196
+Stack trace:
+#0 F:\Work\OpenServer\domains\poets\root\vendor\yiisoft\yii2\BaseYii.php(518): yii\base\Component->__set('connectionStrin...', 'pgsql:host=ec2-...')
+#1 F:\Work\OpenServer\domains\poets\root\vendor\yiisoft\yii2\base\Object.php(105): yii\BaseYii::configure(Object(yii\db\Connection), Array)
+#2 [internal function]: yii\base\Object->__construct(Array)
+#3 F:\Work\OpenServer\domains\poets\root\vendor\yiisoft\yii2\di\Container.php(364): ReflectionClass->newInstanceArgs(Array)
+#4 F:\Work\OpenServer\domains\poets\root\vendor\yiisoft\yii2\di\Container.php(147): yii\di\Container->build('yii\db\Connecti...', Array, Array)
+#5 F:\Work\OpenServer\domains\poets\root\vendor\yiisoft\yii2\BaseYii.php(344): yii\di\Container->get('yii\db\Connecti...', Array, Array)
+#6 F:\Work\OpenServer\domains\poets\root\vendor\yiisoft\yii2\di\ServiceLocator.php(132): yii\BaseYii::createObject(Array)
+#7 F:\Work\OpenServer\domains\poets\root\vendor\yiisoft\yii2-gii\generators\model\Generator.php(605): yii\di\ServiceLocator->get('db', false)
+#8 F:\Work\OpenServer\domains\poets\root\vendor\yiisoft\yii2-gii\generators\model\Generator.php(126): yii\gii\generators\model\Generator->getDbConnection()
+#9 F:\Work\OpenServer\domains\poets\root\vendor\yiisoft\yii2-gii\components\ActiveField.php(37): yii\gii\generators\model\Generator->autoCompleteData()
+#10 F:\Work\OpenServer\domains\poets\root\vendor\yiisoft\yii2\base\Object.php(107): yii\gii\components\ActiveField->init()
+#11 [internal function]: yii\base\Object->__construct(Array)
+#12 F:\Work\OpenServer\domains\poets\root\vendor\yiisoft\yii2\di\Container.php(364): ReflectionClass->newInstanceArgs(Array)
+#13 F:\Work\OpenServer\domains\poets\root\vendor\yiisoft\yii2\di\Container.php(147): yii\di\Container->build('yii\gii\compone...', Array, Array)
+#14 F:\Work\OpenServer\domains\poets\root\vendor\yiisoft\yii2\BaseYii.php(344): yii\di\Container->get('yii\gii\compone...', Array, Array)
+#15 F:\Work\OpenServer\domains\poets\root\vendor\yiisoft\yii2\widgets\ActiveForm.php(257): yii\BaseYii::createObject(Array)
+#16 F:\Work\OpenServer\domains\poets\root\vendor\yiisoft\yii2-gii\generators\model\form.php(8): yii\widgets\ActiveForm->field(Object(yii\gii\generators\model\Generator), 'tableName')
+#17 F:\Work\OpenServer\domains\poets\root\vendor\yiisoft\yii2\base\View.php(315): require('F:\Work\OpenSer...')
+#18 F:\Work\OpenServer\domains\poets\root\vendor\yiisoft\yii2\base\View.php(247): yii\base\View->renderPhpFile('F:\Work\OpenSer...', Array)
+#19 F:\Work\OpenServer\domains\poets\root\vendor\yiisoft\yii2-gii\views\default\view.php(40): yii\base\View->renderFile('F:\Work\OpenSer...', Array)
+#20 F:\Work\OpenServer\domains\poets\root\vendor\yiisoft\yii2\base\View.php(315): require('F:\Work\OpenSer...')
+#21 F:\Work\OpenServer\domains\poets\root\vendor\yiisoft\yii2\base\View.php(247): yii\base\View->renderPhpFile('F:\Work\OpenSer...', Array)
+#22 F:\Work\OpenServer\domains\poets\root\vendor\yiisoft\yii2\base\View.php(149): yii\base\View->renderFile('F:\Work\OpenSer...', Array, Object(yii\gii\controllers\DefaultController))
+#23 F:\Work\OpenServer\domains\poets\root\vendor\yiisoft\yii2\base\Controller.php(362): yii\base\View->render('view', Array, Object(yii\gii\controllers\DefaultController))
+#24 F:\Work\OpenServer\domains\poets\root\vendor\yiisoft\yii2-gii\controllers\DefaultController.php(55): yii\base\Controller->render('view', Array)
+#25 [internal function]: yii\gii\controllers\DefaultController->actionView('model')
+#26 F:\Work\OpenServer\domains\poets\root\vendor\yiisoft\yii2\base\InlineAction.php(54): call_user_func_array(Array, Array)
+#27 F:\Work\OpenServer\domains\poets\root\vendor\yiisoft\yii2\base\Controller.php(147): yii\base\InlineAction->runWithParams(Array)
+#28 F:\Work\OpenServer\domains\poets\root\vendor\yiisoft\yii2\base\Module.php(429): yii\base\Controller->runAction('view', Array)
+#29 F:\Work\OpenServer\domains\poets\root\vendor\yiisoft\yii2\web\Application.php(82): yii\base\Module->runAction('gii/default/vie...', Array)
+#30 F:\Work\OpenServer\domains\poets\root\vendor\yiisoft\yii2\base\Application.php(365): yii\web\Application->handleRequest(Object(yii\web\Request))
+#31 F:\Work\OpenServer\domains\poets\root\backend\web\index.php(17): yii\base\Application->run()
+#32 {main}
+2014-06-05 17:09:35 [127.0.0.1][-][-][info][application] $_GET = [
+    'r' => 'gii/default/view'
+    'id' => 'model'
+]
+
+$_COOKIE = [
+    'PHPSESSID' => 'bvimaf7cqni5amnagehq08qfi0'
+    '_csrf' => '2221b1124b18d0bd9f9bf2f8e010fc6690d380c0ef188dcc2059fdb360c241f9s:32:\"47VZkCCnB3RXF-QMmb6Z-zDEqD3TeruW\";'
+]
+
+$_SERVER = [
+    'HTTP_HOST' => 'admin.poets.yii'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/37.0.2024.2 Safari/537.36'
+    'HTTP_REFERER' => 'http://admin.poets.yii/index.php?r=gii'
+    'HTTP_ACCEPT_ENCODING' => 'gzip,deflate,sdch'
+    'HTTP_ACCEPT_LANGUAGE' => 'ru-RU,ru;q=0.8,en-US;q=0.6,en;q=0.4'
+    'HTTP_COOKIE' => 'PHPSESSID=bvimaf7cqni5amnagehq08qfi0; _csrf=2221b1124b18d0bd9f9bf2f8e010fc6690d380c0ef188dcc2059fdb360c241f9s%3A32%3A%2247VZkCCnB3RXF-QMmb6Z-zDEqD3TeruW%22%3B'
+    'PATH' => 'F:\\Work\\OpenServer\\modules\\php\\PHP-5.4.22\\ext;F:\\Work\\OpenServer\\modules\\php\\PHP-5.4.22\\pear;F:\\Work\\OpenServer\\modules\\imagemagick;F:\\Work\\OpenServer\\modules\\php\\PHP-5.4.22;F:\\Work\\OpenServer\\modules\\database\\MySQL-5.5.35\\bin;F:\\Work\\OpenServer\\modules\\http\\Apache-2.2.26\\bin;F:\\Work\\OpenServer\\modules\\http\\Apache-2.2.26;F:\\Work\\OpenServer\\modules\\wget\\bin;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\system32\\Wbem;C:\\Windows\\SysWOW64'
+    'SystemRoot' => 'C:\\Windows'
+    'COMSPEC' => 'C:\\Windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\Windows'
+    'SERVER_SIGNATURE' => ''
+    'SERVER_SOFTWARE' => 'Apache/2.2.26 (Win32)'
+    'SERVER_NAME' => 'admin.poets.yii'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => 'F:/Work/OpenServer/domains/poets/root/backend/web'
+    'SERVER_ADMIN' => '[no address given]'
+    'SCRIPT_FILENAME' => 'F:/Work/OpenServer/domains/poets/root/backend/web/index.php'
+    'REMOTE_PORT' => '64513'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'r=gii/default/view&id=model'
+    'REQUEST_URI' => '/index.php?r=gii/default/view&id=model'
+    'SCRIPT_NAME' => '/index.php'
+    'PHP_SELF' => '/index.php'
+    'REQUEST_TIME_FLOAT' => 1401973775.269
+    'REQUEST_TIME' => 1401973775
+    'argv' => [
+        0 => 'r=gii/default/view&id=model'
+    ]
+    'argc' => 1
+]
+2014-06-05 17:09:49 [127.0.0.1][-][-][error][yii\db\Exception] exception 'PDOException' with message 'SQLSTATE[08006] [7] FATAL:  no pg_hba.conf entry for host "178.150.143.46", user "bnctpwjmbvmvyj", database "dnavqd9qna0dg", SSL off' in F:\Work\OpenServer\domains\poets\root\vendor\yiisoft\yii2\db\Connection.php:363
+Stack trace:
+#0 F:\Work\OpenServer\domains\poets\root\vendor\yiisoft\yii2\db\Connection.php(363): PDO->__construct('pgsql:host=ec2-...', 'bnctpwjmbvmvyj', 'jIOfvYCSfoM_ezT...', NULL)
+#1 F:\Work\OpenServer\domains\poets\root\vendor\yiisoft\yii2\db\Connection.php(317): yii\db\Connection->createPdoInstance()
+#2 F:\Work\OpenServer\domains\poets\root\vendor\yiisoft\yii2\db\Connection.php(393): yii\db\Connection->open()
+#3 F:\Work\OpenServer\domains\poets\root\vendor\yiisoft\yii2\db\pgsql\Schema.php(204): yii\db\Connection->createCommand('SELECT table_na...')
+#4 F:\Work\OpenServer\domains\poets\root\vendor\yiisoft\yii2\db\Schema.php(191): yii\db\pgsql\Schema->findTableNames('')
+#5 F:\Work\OpenServer\domains\poets\root\vendor\yiisoft\yii2-gii\generators\model\Generator.php(130): yii\db\Schema->getTableNames()
+#6 [internal function]: yii\gii\generators\model\Generator->yii\gii\generators\model\{closure}()
+#7 F:\Work\OpenServer\domains\poets\root\vendor\yiisoft\yii2-gii\components\ActiveField.php(40): call_user_func(Object(Closure))
+#8 F:\Work\OpenServer\domains\poets\root\vendor\yiisoft\yii2\base\Object.php(107): yii\gii\components\ActiveField->init()
+#9 [internal function]: yii\base\Object->__construct(Array)
+#10 F:\Work\OpenServer\domains\poets\root\vendor\yiisoft\yii2\di\Container.php(364): ReflectionClass->newInstanceArgs(Array)
+#11 F:\Work\OpenServer\domains\poets\root\vendor\yiisoft\yii2\di\Container.php(147): yii\di\Container->build('yii\gii\compone...', Array, Array)
+#12 F:\Work\OpenServer\domains\poets\root\vendor\yiisoft\yii2\BaseYii.php(344): yii\di\Container->get('yii\gii\compone...', Array, Array)
+#13 F:\Work\OpenServer\domains\poets\root\vendor\yiisoft\yii2\widgets\ActiveForm.php(257): yii\BaseYii::createObject(Array)
+#14 F:\Work\OpenServer\domains\poets\root\vendor\yiisoft\yii2-gii\generators\model\form.php(8): yii\widgets\ActiveForm->field(Object(yii\gii\generators\model\Generator), 'tableName')
+#15 F:\Work\OpenServer\domains\poets\root\vendor\yiisoft\yii2\base\View.php(315): require('F:\Work\OpenSer...')
+#16 F:\Work\OpenServer\domains\poets\root\vendor\yiisoft\yii2\base\View.php(247): yii\base\View->renderPhpFile('F:\Work\OpenSer...', Array)
+#17 F:\Work\OpenServer\domains\poets\root\vendor\yiisoft\yii2-gii\views\default\view.php(40): yii\base\View->renderFile('F:\Work\OpenSer...', Array)
+#18 F:\Work\OpenServer\domains\poets\root\vendor\yiisoft\yii2\base\View.php(315): require('F:\Work\OpenSer...')
+#19 F:\Work\OpenServer\domains\poets\root\vendor\yiisoft\yii2\base\View.php(247): yii\base\View->renderPhpFile('F:\Work\OpenSer...', Array)
+#20 F:\Work\OpenServer\domains\poets\root\vendor\yiisoft\yii2\base\View.php(149): yii\base\View->renderFile('F:\Work\OpenSer...', Array, Object(yii\gii\controllers\DefaultController))
+#21 F:\Work\OpenServer\domains\poets\root\vendor\yiisoft\yii2\base\Controller.php(362): yii\base\View->render('view', Array, Object(yii\gii\controllers\DefaultController))
+#22 F:\Work\OpenServer\domains\poets\root\vendor\yiisoft\yii2-gii\controllers\DefaultController.php(55): yii\base\Controller->render('view', Array)
+#23 [internal function]: yii\gii\controllers\DefaultController->actionView('model')
+#24 F:\Work\OpenServer\domains\poets\root\vendor\yiisoft\yii2\base\InlineAction.php(54): call_user_func_array(Array, Array)
+#25 F:\Work\OpenServer\domains\poets\root\vendor\yiisoft\yii2\base\Controller.php(147): yii\base\InlineAction->runWithParams(Array)
+#26 F:\Work\OpenServer\domains\poets\root\vendor\yiisoft\yii2\base\Module.php(429): yii\base\Controller->runAction('view', Array)
+#27 F:\Work\OpenServer\domains\poets\root\vendor\yiisoft\yii2\web\Application.php(82): yii\base\Module->runAction('gii/default/vie...', Array)
+#28 F:\Work\OpenServer\domains\poets\root\vendor\yiisoft\yii2\base\Application.php(365): yii\web\Application->handleRequest(Object(yii\web\Request))
+#29 F:\Work\OpenServer\domains\poets\root\backend\web\index.php(17): yii\base\Application->run()
+#30 {main}
+
+Next exception 'yii\db\Exception' with message 'SQLSTATE[08006] [7] FATAL:  no pg_hba.conf entry for host "178.150.143.46", user "bnctpwjmbvmvyj", database "dnavqd9qna0dg", SSL off' in F:\Work\OpenServer\domains\poets\root\vendor\yiisoft\yii2\db\Connection.php:322
+Stack trace:
+#0 F:\Work\OpenServer\domains\poets\root\vendor\yiisoft\yii2\db\Connection.php(393): yii\db\Connection->open()
+#1 F:\Work\OpenServer\domains\poets\root\vendor\yiisoft\yii2\db\pgsql\Schema.php(204): yii\db\Connection->createCommand('SELECT table_na...')
+#2 F:\Work\OpenServer\domains\poets\root\vendor\yiisoft\yii2\db\Schema.php(191): yii\db\pgsql\Schema->findTableNames('')
+#3 F:\Work\OpenServer\domains\poets\root\vendor\yiisoft\yii2-gii\generators\model\Generator.php(130): yii\db\Schema->getTableNames()
+#4 [internal function]: yii\gii\generators\model\Generator->yii\gii\generators\model\{closure}()
+#5 F:\Work\OpenServer\domains\poets\root\vendor\yiisoft\yii2-gii\components\ActiveField.php(40): call_user_func(Object(Closure))
+#6 F:\Work\OpenServer\domains\poets\root\vendor\yiisoft\yii2\base\Object.php(107): yii\gii\components\ActiveField->init()
+#7 [internal function]: yii\base\Object->__construct(Array)
+#8 F:\Work\OpenServer\domains\poets\root\vendor\yiisoft\yii2\di\Container.php(364): ReflectionClass->newInstanceArgs(Array)
+#9 F:\Work\OpenServer\domains\poets\root\vendor\yiisoft\yii2\di\Container.php(147): yii\di\Container->build('yii\gii\compone...', Array, Array)
+#10 F:\Work\OpenServer\domains\poets\root\vendor\yiisoft\yii2\BaseYii.php(344): yii\di\Container->get('yii\gii\compone...', Array, Array)
+#11 F:\Work\OpenServer\domains\poets\root\vendor\yiisoft\yii2\widgets\ActiveForm.php(257): yii\BaseYii::createObject(Array)
+#12 F:\Work\OpenServer\domains\poets\root\vendor\yiisoft\yii2-gii\generators\model\form.php(8): yii\widgets\ActiveForm->field(Object(yii\gii\generators\model\Generator), 'tableName')
+#13 F:\Work\OpenServer\domains\poets\root\vendor\yiisoft\yii2\base\View.php(315): require('F:\Work\OpenSer...')
+#14 F:\Work\OpenServer\domains\poets\root\vendor\yiisoft\yii2\base\View.php(247): yii\base\View->renderPhpFile('F:\Work\OpenSer...', Array)
+#15 F:\Work\OpenServer\domains\poets\root\vendor\yiisoft\yii2-gii\views\default\view.php(40): yii\base\View->renderFile('F:\Work\OpenSer...', Array)
+#16 F:\Work\OpenServer\domains\poets\root\vendor\yiisoft\yii2\base\View.php(315): require('F:\Work\OpenSer...')
+#17 F:\Work\OpenServer\domains\poets\root\vendor\yiisoft\yii2\base\View.php(247): yii\base\View->renderPhpFile('F:\Work\OpenSer...', Array)
+#18 F:\Work\OpenServer\domains\poets\root\vendor\yiisoft\yii2\base\View.php(149): yii\base\View->renderFile('F:\Work\OpenSer...', Array, Object(yii\gii\controllers\DefaultController))
+#19 F:\Work\OpenServer\domains\poets\root\vendor\yiisoft\yii2\base\Controller.php(362): yii\base\View->render('view', Array, Object(yii\gii\controllers\DefaultController))
+#20 F:\Work\OpenServer\domains\poets\root\vendor\yiisoft\yii2-gii\controllers\DefaultController.php(55): yii\base\Controller->render('view', Array)
+#21 [internal function]: yii\gii\controllers\DefaultController->actionView('model')
+#22 F:\Work\OpenServer\domains\poets\root\vendor\yiisoft\yii2\base\InlineAction.php(54): call_user_func_array(Array, Array)
+#23 F:\Work\OpenServer\domains\poets\root\vendor\yiisoft\yii2\base\Controller.php(147): yii\base\InlineAction->runWithParams(Array)
+#24 F:\Work\OpenServer\domains\poets\root\vendor\yiisoft\yii2\base\Module.php(429): yii\base\Controller->runAction('view', Array)
+#25 F:\Work\OpenServer\domains\poets\root\vendor\yiisoft\yii2\web\Application.php(82): yii\base\Module->runAction('gii/default/vie...', Array)
+#26 F:\Work\OpenServer\domains\poets\root\vendor\yiisoft\yii2\base\Application.php(365): yii\web\Application->handleRequest(Object(yii\web\Request))
+#27 F:\Work\OpenServer\domains\poets\root\backend\web\index.php(17): yii\base\Application->run()
+#28 {main}
+Additional Information:
+
+2014-06-05 17:09:49 [127.0.0.1][-][-][info][application] $_GET = [
+    'r' => 'gii/default/view'
+    'id' => 'model'
+]
+
+$_COOKIE = [
+    'PHPSESSID' => 'bvimaf7cqni5amnagehq08qfi0'
+    '_csrf' => '2221b1124b18d0bd9f9bf2f8e010fc6690d380c0ef188dcc2059fdb360c241f9s:32:\"47VZkCCnB3RXF-QMmb6Z-zDEqD3TeruW\";'
+]
+
+$_SERVER = [
+    'HTTP_HOST' => 'admin.poets.yii'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/37.0.2024.2 Safari/537.36'
+    'HTTP_REFERER' => 'http://admin.poets.yii/index.php?r=gii'
+    'HTTP_ACCEPT_ENCODING' => 'gzip,deflate,sdch'
+    'HTTP_ACCEPT_LANGUAGE' => 'ru-RU,ru;q=0.8,en-US;q=0.6,en;q=0.4'
+    'HTTP_COOKIE' => 'PHPSESSID=bvimaf7cqni5amnagehq08qfi0; _csrf=2221b1124b18d0bd9f9bf2f8e010fc6690d380c0ef188dcc2059fdb360c241f9s%3A32%3A%2247VZkCCnB3RXF-QMmb6Z-zDEqD3TeruW%22%3B'
+    'PATH' => 'F:\\Work\\OpenServer\\modules\\php\\PHP-5.4.22\\ext;F:\\Work\\OpenServer\\modules\\php\\PHP-5.4.22\\pear;F:\\Work\\OpenServer\\modules\\imagemagick;F:\\Work\\OpenServer\\modules\\php\\PHP-5.4.22;F:\\Work\\OpenServer\\modules\\database\\MySQL-5.5.35\\bin;F:\\Work\\OpenServer\\modules\\http\\Apache-2.2.26\\bin;F:\\Work\\OpenServer\\modules\\http\\Apache-2.2.26;F:\\Work\\OpenServer\\modules\\wget\\bin;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\system32\\Wbem;C:\\Windows\\SysWOW64'
+    'SystemRoot' => 'C:\\Windows'
+    'COMSPEC' => 'C:\\Windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\Windows'
+    'SERVER_SIGNATURE' => ''
+    'SERVER_SOFTWARE' => 'Apache/2.2.26 (Win32)'
+    'SERVER_NAME' => 'admin.poets.yii'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => 'F:/Work/OpenServer/domains/poets/root/backend/web'
+    'SERVER_ADMIN' => '[no address given]'
+    'SCRIPT_FILENAME' => 'F:/Work/OpenServer/domains/poets/root/backend/web/index.php'
+    'REMOTE_PORT' => '64515'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'r=gii/default/view&id=model'
+    'REQUEST_URI' => '/index.php?r=gii/default/view&id=model'
+    'SCRIPT_NAME' => '/index.php'
+    'PHP_SELF' => '/index.php'
+    'REQUEST_TIME_FLOAT' => 1401973789.059
+    'REQUEST_TIME' => 1401973789
+    'argv' => [
+        0 => 'r=gii/default/view&id=model'
+    ]
+    'argc' => 1
+]
+2014-06-05 17:20:15 [127.0.0.1][-][-][error][yii\db\Exception] exception 'yii\base\ErrorException' with message 'PDO::__construct(): ' in F:\Work\OpenServer\domains\poets\root\vendor\yiisoft\yii2\db\Connection.php:363
+Stack trace:
+#0 F:\Work\OpenServer\domains\poets\root\vendor\yiisoft\yii2\db\Connection.php(317): yii\db\Connection->createPdoInstance()
+#1 F:\Work\OpenServer\domains\poets\root\vendor\yiisoft\yii2\db\Connection.php(393): yii\db\Connection->open()
+#2 F:\Work\OpenServer\domains\poets\root\vendor\yiisoft\yii2\db\mysql\Schema.php(294): yii\db\Connection->createCommand()
+#3 F:\Work\OpenServer\domains\poets\root\vendor\yiisoft\yii2\db\Schema.php(191): yii\db\mysql\Schema->findTableNames()
+#4 F:\Work\OpenServer\domains\poets\root\vendor\yiisoft\yii2-gii\generators\model\Generator.php(130): yii\db\Schema->getTableNames()
+#5 F:\Work\OpenServer\domains\poets\root\vendor\yiisoft\yii2-gii\components\ActiveField.php(40): yii\gii\generators\model\Generator->yii\gii\generators\model\{closure}()
+#6 F:\Work\OpenServer\domains\poets\root\vendor\yiisoft\yii2-gii\components\ActiveField.php(40): ::call_user_func()
+#7 F:\Work\OpenServer\domains\poets\root\vendor\yiisoft\yii2\base\Object.php(107): yii\gii\components\ActiveField->init()
+#8 F:\Work\OpenServer\domains\poets\root\vendor\yiisoft\yii2\di\Container.php(364): yii\base\Object->__construct()
+#9 F:\Work\OpenServer\domains\poets\root\vendor\yiisoft\yii2\di\Container.php(364): ReflectionClass->newInstanceArgs()
+#10 F:\Work\OpenServer\domains\poets\root\vendor\yiisoft\yii2\di\Container.php(147): yii\di\Container->build()
+#11 F:\Work\OpenServer\domains\poets\root\vendor\yiisoft\yii2\BaseYii.php(344): yii\di\Container->get()
+#12 F:\Work\OpenServer\domains\poets\root\vendor\yiisoft\yii2\widgets\ActiveForm.php(257): yii\BaseYii::createObject()
+#13 F:\Work\OpenServer\domains\poets\root\vendor\yiisoft\yii2-gii\generators\model\form.php(8): yii\widgets\ActiveForm->field()
+#14 F:\Work\OpenServer\domains\poets\root\vendor\yiisoft\yii2\base\View.php(315): ::unknown()
+#15 F:\Work\OpenServer\domains\poets\root\vendor\yiisoft\yii2\base\View.php(247): yii\base\View->renderPhpFile()
+#16 F:\Work\OpenServer\domains\poets\root\vendor\yiisoft\yii2-gii\views\default\view.php(40): yii\base\View->renderFile()
+#17 F:\Work\OpenServer\domains\poets\root\vendor\yiisoft\yii2\base\View.php(315): ::unknown()
+#18 F:\Work\OpenServer\domains\poets\root\vendor\yiisoft\yii2\base\View.php(247): yii\base\View->renderPhpFile()
+#19 F:\Work\OpenServer\domains\poets\root\vendor\yiisoft\yii2\base\View.php(149): yii\base\View->renderFile()
+#20 F:\Work\OpenServer\domains\poets\root\vendor\yiisoft\yii2\base\Controller.php(362): yii\base\View->render()
+#21 F:\Work\OpenServer\domains\poets\root\vendor\yiisoft\yii2-gii\controllers\DefaultController.php(55): yii\base\Controller->render()
+#22 F:\Work\OpenServer\domains\poets\root\vendor\yiisoft\yii2\base\InlineAction.php(54): yii\gii\controllers\DefaultController->actionView()
+#23 F:\Work\OpenServer\domains\poets\root\vendor\yiisoft\yii2\base\InlineAction.php(54): ::call_user_func_array()
+#24 F:\Work\OpenServer\domains\poets\root\vendor\yiisoft\yii2\base\Controller.php(147): yii\base\InlineAction->runWithParams()
+#25 F:\Work\OpenServer\domains\poets\root\vendor\yiisoft\yii2\base\Module.php(429): yii\base\Controller->runAction()
+#26 F:\Work\OpenServer\domains\poets\root\vendor\yiisoft\yii2\web\Application.php(82): yii\base\Module->runAction()
+#27 F:\Work\OpenServer\domains\poets\root\vendor\yiisoft\yii2\base\Application.php(365): yii\web\Application->handleRequest()
+#28 F:\Work\OpenServer\domains\poets\root\backend\web\index.php(17): yii\base\Application->run()
+#29 {main}
+
+Next exception 'PDOException' with message 'SQLSTATE[HY000] [2002] php_network_getaddresses: getaddrinfo failed: Этот хост неизвестен. ' in F:\Work\OpenServer\domains\poets\root\vendor\yiisoft\yii2\db\Connection.php:363
+Stack trace:
+#0 F:\Work\OpenServer\domains\poets\root\vendor\yiisoft\yii2\db\Connection.php(0): PDO->__construct()
+#1 F:\Work\OpenServer\domains\poets\root\vendor\yiisoft\yii2\db\Connection.php(317): yii\db\Connection->createPdoInstance()
+#2 F:\Work\OpenServer\domains\poets\root\vendor\yiisoft\yii2\db\Connection.php(393): yii\db\Connection->open()
+#3 F:\Work\OpenServer\domains\poets\root\vendor\yiisoft\yii2\db\mysql\Schema.php(294): yii\db\Connection->createCommand('SHOW TABLES')
+#4 F:\Work\OpenServer\domains\poets\root\vendor\yiisoft\yii2\db\Schema.php(191): yii\db\mysql\Schema->findTableNames('')
+#5 F:\Work\OpenServer\domains\poets\root\vendor\yiisoft\yii2-gii\generators\model\Generator.php(130): yii\db\Schema->getTableNames()
+#6 [internal function]: yii\gii\generators\model\Generator->yii\gii\generators\model\{closure}()
+#7 F:\Work\OpenServer\domains\poets\root\vendor\yiisoft\yii2-gii\components\ActiveField.php(40): call_user_func(Object(Closure))
+#8 F:\Work\OpenServer\domains\poets\root\vendor\yiisoft\yii2\base\Object.php(107): yii\gii\components\ActiveField->init()
+#9 [internal function]: yii\base\Object->__construct(Array)
+#10 F:\Work\OpenServer\domains\poets\root\vendor\yiisoft\yii2\di\Container.php(364): ReflectionClass->newInstanceArgs(Array)
+#11 F:\Work\OpenServer\domains\poets\root\vendor\yiisoft\yii2\di\Container.php(147): yii\di\Container->build('yii\gii\compone...', Array, Array)
+#12 F:\Work\OpenServer\domains\poets\root\vendor\yiisoft\yii2\BaseYii.php(344): yii\di\Container->get('yii\gii\compone...', Array, Array)
+#13 F:\Work\OpenServer\domains\poets\root\vendor\yiisoft\yii2\widgets\ActiveForm.php(257): yii\BaseYii::createObject(Array)
+#14 F:\Work\OpenServer\domains\poets\root\vendor\yiisoft\yii2-gii\generators\model\form.php(8): yii\widgets\ActiveForm->field(Object(yii\gii\generators\model\Generator), 'tableName')
+#15 F:\Work\OpenServer\domains\poets\root\vendor\yiisoft\yii2\base\View.php(315): require('F:\Work\OpenSer...')
+#16 F:\Work\OpenServer\domains\poets\root\vendor\yiisoft\yii2\base\View.php(247): yii\base\View->renderPhpFile('F:\Work\OpenSer...', Array)
+#17 F:\Work\OpenServer\domains\poets\root\vendor\yiisoft\yii2-gii\views\default\view.php(40): yii\base\View->renderFile('F:\Work\OpenSer...', Array)
+#18 F:\Work\OpenServer\domains\poets\root\vendor\yiisoft\yii2\base\View.php(315): require('F:\Work\OpenSer...')
+#19 F:\Work\OpenServer\domains\poets\root\vendor\yiisoft\yii2\base\View.php(247): yii\base\View->renderPhpFile('F:\Work\OpenSer...', Array)
+#20 F:\Work\OpenServer\domains\poets\root\vendor\yiisoft\yii2\base\View.php(149): yii\base\View->renderFile('F:\Work\OpenSer...', Array, Object(yii\gii\controllers\DefaultController))
+#21 F:\Work\OpenServer\domains\poets\root\vendor\yiisoft\yii2\base\Controller.php(362): yii\base\View->render('view', Array, Object(yii\gii\controllers\DefaultController))
+#22 F:\Work\OpenServer\domains\poets\root\vendor\yiisoft\yii2-gii\controllers\DefaultController.php(55): yii\base\Controller->render('view', Array)
+#23 [internal function]: yii\gii\controllers\DefaultController->actionView('model')
+#24 F:\Work\OpenServer\domains\poets\root\vendor\yiisoft\yii2\base\InlineAction.php(54): call_user_func_array(Array, Array)
+#25 F:\Work\OpenServer\domains\poets\root\vendor\yiisoft\yii2\base\Controller.php(147): yii\base\InlineAction->runWithParams(Array)
+#26 F:\Work\OpenServer\domains\poets\root\vendor\yiisoft\yii2\base\Module.php(429): yii\base\Controller->runAction('view', Array)
+#27 F:\Work\OpenServer\domains\poets\root\vendor\yiisoft\yii2\web\Application.php(82): yii\base\Module->runAction('gii/default/vie...', Array)
+#28 F:\Work\OpenServer\domains\poets\root\vendor\yiisoft\yii2\base\Application.php(365): yii\web\Application->handleRequest(Object(yii\web\Request))
+#29 F:\Work\OpenServer\domains\poets\root\backend\web\index.php(17): yii\base\Application->run()
+#30 {main}
+
+Next exception 'yii\db\Exception' with message 'SQLSTATE[HY000] [2002] php_network_getaddresses: getaddrinfo failed: Этот хост неизвестен. ' in F:\Work\OpenServer\domains\poets\root\vendor\yiisoft\yii2\db\Connection.php:322
+Stack trace:
+#0 F:\Work\OpenServer\domains\poets\root\vendor\yiisoft\yii2\db\Connection.php(393): yii\db\Connection->open()
+#1 F:\Work\OpenServer\domains\poets\root\vendor\yiisoft\yii2\db\mysql\Schema.php(294): yii\db\Connection->createCommand('SHOW TABLES')
+#2 F:\Work\OpenServer\domains\poets\root\vendor\yiisoft\yii2\db\Schema.php(191): yii\db\mysql\Schema->findTableNames('')
+#3 F:\Work\OpenServer\domains\poets\root\vendor\yiisoft\yii2-gii\generators\model\Generator.php(130): yii\db\Schema->getTableNames()
+#4 [internal function]: yii\gii\generators\model\Generator->yii\gii\generators\model\{closure}()
+#5 F:\Work\OpenServer\domains\poets\root\vendor\yiisoft\yii2-gii\components\ActiveField.php(40): call_user_func(Object(Closure))
+#6 F:\Work\OpenServer\domains\poets\root\vendor\yiisoft\yii2\base\Object.php(107): yii\gii\components\ActiveField->init()
+#7 [internal function]: yii\base\Object->__construct(Array)
+#8 F:\Work\OpenServer\domains\poets\root\vendor\yiisoft\yii2\di\Container.php(364): ReflectionClass->newInstanceArgs(Array)
+#9 F:\Work\OpenServer\domains\poets\root\vendor\yiisoft\yii2\di\Container.php(147): yii\di\Container->build('yii\gii\compone...', Array, Array)
+#10 F:\Work\OpenServer\domains\poets\root\vendor\yiisoft\yii2\BaseYii.php(344): yii\di\Container->get('yii\gii\compone...', Array, Array)
+#11 F:\Work\OpenServer\domains\poets\root\vendor\yiisoft\yii2\widgets\ActiveForm.php(257): yii\BaseYii::createObject(Array)
+#12 F:\Work\OpenServer\domains\poets\root\vendor\yiisoft\yii2-gii\generators\model\form.php(8): yii\widgets\ActiveForm->field(Object(yii\gii\generators\model\Generator), 'tableName')
+#13 F:\Work\OpenServer\domains\poets\root\vendor\yiisoft\yii2\base\View.php(315): require('F:\Work\OpenSer...')
+#14 F:\Work\OpenServer\domains\poets\root\vendor\yiisoft\yii2\base\View.php(247): yii\base\View->renderPhpFile('F:\Work\OpenSer...', Array)
+#15 F:\Work\OpenServer\domains\poets\root\vendor\yiisoft\yii2-gii\views\default\view.php(40): yii\base\View->renderFile('F:\Work\OpenSer...', Array)
+#16 F:\Work\OpenServer\domains\poets\root\vendor\yiisoft\yii2\base\View.php(315): require('F:\Work\OpenSer...')
+#17 F:\Work\OpenServer\domains\poets\root\vendor\yiisoft\yii2\base\View.php(247): yii\base\View->renderPhpFile('F:\Work\OpenSer...', Array)
+#18 F:\Work\OpenServer\domains\poets\root\vendor\yiisoft\yii2\base\View.php(149): yii\base\View->renderFile('F:\Work\OpenSer...', Array, Object(yii\gii\controllers\DefaultController))
+#19 F:\Work\OpenServer\domains\poets\root\vendor\yiisoft\yii2\base\Controller.php(362): yii\base\View->render('view', Array, Object(yii\gii\controllers\DefaultController))
+#20 F:\Work\OpenServer\domains\poets\root\vendor\yiisoft\yii2-gii\controllers\DefaultController.php(55): yii\base\Controller->render('view', Array)
+#21 [internal function]: yii\gii\controllers\DefaultController->actionView('model')
+#22 F:\Work\OpenServer\domains\poets\root\vendor\yiisoft\yii2\base\InlineAction.php(54): call_user_func_array(Array, Array)
+#23 F:\Work\OpenServer\domains\poets\root\vendor\yiisoft\yii2\base\Controller.php(147): yii\base\InlineAction->runWithParams(Array)
+#24 F:\Work\OpenServer\domains\poets\root\vendor\yiisoft\yii2\base\Module.php(429): yii\base\Controller->runAction('view', Array)
+#25 F:\Work\OpenServer\domains\poets\root\vendor\yiisoft\yii2\web\Application.php(82): yii\base\Module->runAction('gii/default/vie...', Array)
+#26 F:\Work\OpenServer\domains\poets\root\vendor\yiisoft\yii2\base\Application.php(365): yii\web\Application->handleRequest(Object(yii\web\Request))
+#27 F:\Work\OpenServer\domains\poets\root\backend\web\index.php(17): yii\base\Application->run()
+#28 {main}
+Additional Information:
+
+2014-06-05 17:20:13 [127.0.0.1][-][-][info][application] $_GET = [
+    'r' => 'gii/default/view'
+    'id' => 'model'
+]
+
+$_COOKIE = [
+    'PHPSESSID' => 'bvimaf7cqni5amnagehq08qfi0'
+    '_csrf' => '2221b1124b18d0bd9f9bf2f8e010fc6690d380c0ef188dcc2059fdb360c241f9s:32:\"47VZkCCnB3RXF-QMmb6Z-zDEqD3TeruW\";'
+]
+
+$_SERVER = [
+    'HTTP_HOST' => 'admin.poets.yii'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/37.0.2024.2 Safari/537.36'
+    'HTTP_REFERER' => 'http://admin.poets.yii/index.php?r=gii'
+    'HTTP_ACCEPT_ENCODING' => 'gzip,deflate,sdch'
+    'HTTP_ACCEPT_LANGUAGE' => 'ru-RU,ru;q=0.8,en-US;q=0.6,en;q=0.4'
+    'HTTP_COOKIE' => 'PHPSESSID=bvimaf7cqni5amnagehq08qfi0; _csrf=2221b1124b18d0bd9f9bf2f8e010fc6690d380c0ef188dcc2059fdb360c241f9s%3A32%3A%2247VZkCCnB3RXF-QMmb6Z-zDEqD3TeruW%22%3B'
+    'PATH' => 'F:\\Work\\OpenServer\\modules\\php\\PHP-5.4.22\\ext;F:\\Work\\OpenServer\\modules\\php\\PHP-5.4.22\\pear;F:\\Work\\OpenServer\\modules\\imagemagick;F:\\Work\\OpenServer\\modules\\php\\PHP-5.4.22;F:\\Work\\OpenServer\\modules\\database\\MySQL-5.5.35\\bin;F:\\Work\\OpenServer\\modules\\http\\Apache-2.2.26\\bin;F:\\Work\\OpenServer\\modules\\http\\Apache-2.2.26;F:\\Work\\OpenServer\\modules\\wget\\bin;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\system32\\Wbem;C:\\Windows\\SysWOW64'
+    'SystemRoot' => 'C:\\Windows'
+    'COMSPEC' => 'C:\\Windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\Windows'
+    'SERVER_SIGNATURE' => ''
+    'SERVER_SOFTWARE' => 'Apache/2.2.26 (Win32)'
+    'SERVER_NAME' => 'admin.poets.yii'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => 'F:/Work/OpenServer/domains/poets/root/backend/web'
+    'SERVER_ADMIN' => '[no address given]'
+    'SCRIPT_FILENAME' => 'F:/Work/OpenServer/domains/poets/root/backend/web/index.php'
+    'REMOTE_PORT' => '49734'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'r=gii/default/view&id=model'
+    'REQUEST_URI' => '/index.php?r=gii/default/view&id=model'
+    'SCRIPT_NAME' => '/index.php'
+    'PHP_SELF' => '/index.php'
+    'REQUEST_TIME_FLOAT' => 1401974413.19
+    'REQUEST_TIME' => 1401974413
+    'argv' => [
+        0 => 'r=gii/default/view&id=model'
+    ]
+    'argc' => 1
+]
