@@ -35,9 +35,9 @@ return [
         ],
         'db' => [
           'class' => 'yii\db\Connection',
-          'dsn' => 'mysql:host=bb827abd400c0f:0bedfd56@eu-cdbr-west-01.cleardb.com;dbname=heroku_90658a476471586',
-          'username' => 'bb827abd400c0f',
-          'password' => '0bedfd56',
+          'dsn' => 'mysql:host=localhost;dbname=poets',
+          'username' => 'poets',
+          'password' => 'poets',
           'charset' => 'utf8',
         ],
     ],
